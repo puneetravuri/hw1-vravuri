@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="AbbreviationGeneTagAnnotatorDescriptor">
+      <import name="annotator.AbbreviationGeneTagAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="P53GeneTagAnnotatorDescriptor">
+      <import name="annotator.P53GeneTagAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="KeyWordGeneTagAnnotatorDescriptor">
+      <import name="annotator.KeyWordGeneTagAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <flowController key="GeneTagFlowControllerDescriptor">
+    <import name="flow.GeneTagFlowControllerDescriptor"/>
+  </flowController>
+  <analysisEngineMetaData>
+    <name>MasterAnnotatorDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>KeyWordGeneTagAnnotatorDescriptor</node>
+        <node>P53GeneTagAnnotatorDescriptor</node>
+        <node>AbbreviationGeneTagAnnotatorDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

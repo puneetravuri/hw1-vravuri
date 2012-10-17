@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>GeneTypeSystemDescriptor</name>
+  <description>Type System definition for Gene tagging project</description>
+  <version>1.0</version>
+  <vendor/>
+  <types>
+    <typeDescription>
+      <name>typesystem.GeneTag</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>lineCode</name>
+          <description>Unique identifier of each input line</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>content</name>
+          <description>Content of the gene tag</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>
